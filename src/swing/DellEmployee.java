@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -11,7 +13,7 @@ public class DellEmployee extends JFrame {
 
 
     JLabel ID,Name,Sal,Address,Note,msg;
-    JButton Search,Delete;
+    JButton Search,Delete,Back;
 
     JTextArea Idinp;
 
@@ -67,6 +69,15 @@ public class DellEmployee extends JFrame {
         Note = new JLabel("Employee Details will be shone below");
         Search = new JButton("Search");
         msg = new JLabel();
+        Back = new JButton("Home");
+
+        Back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Home();
+                dispose();
+            }
+        });
 
         Search.addActionListener(new ActionListener() {
             @Override
@@ -131,6 +142,18 @@ public class DellEmployee extends JFrame {
             }
         });
 
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+
+
+
+                    dispose();
+                    System.exit(0);
+
+            }
+        });
+
 
 
         ID.setBounds(50,50,60,30);
@@ -141,7 +164,8 @@ public class DellEmployee extends JFrame {
         Address.setBounds(50,190,150,20);
         Search.setBounds(50,240,100,30);
         Delete.setBounds(200,240,100,30);
-        msg.setBounds(50,280,180,60);
+        msg.setBounds(50,0,180,60);
+        Back.setBounds(100,300,180,30);
 
 
 
@@ -155,6 +179,7 @@ public class DellEmployee extends JFrame {
         add(Search);
         add(Delete);
         add(msg);
+        add(Back);
         setSize(400,400);
         setVisible(true);
 

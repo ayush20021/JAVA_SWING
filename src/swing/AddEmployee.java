@@ -15,7 +15,7 @@ public class AddEmployee extends JFrame {
 
     JTextArea Inpaddress;
 
-    JButton savBtn;
+    JButton savBtn,Home;
 
     public void  AddEmp(String Name,String Id,String Sal,String Add) throws SQLException, ClassNotFoundException {
 
@@ -46,6 +46,15 @@ public class AddEmployee extends JFrame {
         Inpaddress = new JTextArea();
         savBtn = new JButton("ADD");
         status = new JLabel();
+        Home = new JButton("Home");
+
+        Home.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new  Home();
+                dispose();
+            }
+        });
 
         savBtn.addActionListener(new ActionListener() {
             @Override
@@ -72,16 +81,15 @@ public class AddEmployee extends JFrame {
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                int confirmed = JOptionPane.showConfirmDialog(null,
-                        "Are you sure you want to exit the program?", "Exit Program Confirmation",
-                        JOptionPane.YES_NO_OPTION);
 
-                if (confirmed == JOptionPane.YES_OPTION) {
+                if (true) {
                     // Close the application
                     dispose(); // Release the resources associated with the JFrame
                     System.exit(0); // Terminate the Java Virtual Machine
                 }
+
             }
+
         });
 
         Name.setBounds(50,50,60,30);
@@ -93,7 +101,8 @@ public class AddEmployee extends JFrame {
         address.setBounds(50,200,60,30);
         Inpaddress.setBounds(110,210,100,20);
         savBtn.setBounds(50,250,60,30);
-        status.setBounds(50,300,200,30);
+        status.setBounds(50,280,200,30);
+        Home.setBounds(120,310,120,30);
 
 
 
@@ -107,6 +116,7 @@ public class AddEmployee extends JFrame {
         add(Inpaddress);
         add(savBtn);
         add(status);
+        add(Home);
         setSize(400,400);
         setVisible(true);
 
