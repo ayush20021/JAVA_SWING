@@ -119,6 +119,7 @@ public class DellEmployee extends JFrame {
                     if(status){
                         msg.setText("EMPLOYEE DESTROYED :)");
                         msg.setForeground(Color.RED);
+                        System.out.println("Employee Deleted");
                     }
                 } catch (ClassNotFoundException ex) {
                     throw new RuntimeException(ex);

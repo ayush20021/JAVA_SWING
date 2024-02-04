@@ -59,6 +59,7 @@ public class AddEmployee extends JFrame {
                     AddEmp(Name,ID,Salary,Address);
                     status.setText("Data Inserted Success ");
                     status.setForeground(Color.GREEN);
+                    System.out.println("Employee Added");
                 } catch (SQLException ex) {
                     throw new RuntimeException(ex);
                 } catch (ClassNotFoundException ex) {
