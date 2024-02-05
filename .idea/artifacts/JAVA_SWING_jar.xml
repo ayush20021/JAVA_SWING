@@ -2,9 +2,6 @@
   <artifact type="jar" name="JAVA_SWING:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/JAVA_SWING_jar</output-path>
     <root id="archive" name="JAVA_SWING.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="P:/SQL/META-INF/MANIFEST.MF" />
-      </element>
       <element id="module-output" name="JAVA_SWING" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/mysql-connector-java-8.0.11 (1).jar" path-in-jar="/" />
     </root>

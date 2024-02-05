@@ -51,7 +51,7 @@ public class AddEmployee extends JFrame {
         Home.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new  Home();
+                new Main();
                 dispose();
             }
         });

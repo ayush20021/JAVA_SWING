@@ -74,7 +74,7 @@ public class DellEmployee extends JFrame {
         Back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Home();
+                new Main();
                 dispose();
             }
         });
@@ -159,7 +159,7 @@ public class DellEmployee extends JFrame {
         ID.setBounds(50,50,60,30);
         Idinp.setBounds(120,50,60,20);
         Note.setBounds(50,100,300,20);
-        Name.setBounds(50,130,100,20);
+        Name.setBounds(50,130,200,20);
         Sal.setBounds(50,160,80,20);
         Address.setBounds(50,190,150,20);
         Search.setBounds(50,240,100,30);
